@@ -36,6 +36,18 @@
       border-radius: 5px;
     }
 
+    .language-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      z-index: 1100;
+    }
+
     .logo {
       max-width: 200px;
       margin: 0 auto;
@@ -126,6 +138,7 @@
 <body>
 
   <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="language-toggle" onclick="toggleLanguage()">🌐 Idioma</div>
 
   <div class="sidebar" id="sidebar">
     <button class="close-btn" onclick="toggleSidebar()">✖</button>
@@ -143,62 +156,62 @@
   <div class="content">
 
     <section id="marketing">
-      <h2>Marketing Estratégico</h2>
+      <h2 data-lang="marketing-title">Marketing Estratégico</h2>
       <ul>
-        <li>Identificamos o público-alvo ideal</li>
-        <li>Criamos campanhas orientadas por dados</li>
-        <li>Monitoramos resultados e otimizamos performance</li>
-        <li>Aumentamos tráfego e autoridade da sua marca</li>
+        <li data-lang="marketing-item-1">Identificamos o público-alvo ideal</li>
+        <li data-lang="marketing-item-2">Criamos campanhas orientadas por dados</li>
+        <li data-lang="marketing-item-3">Monitoramos resultados e otimizamos performance</li>
+        <li data-lang="marketing-item-4">Aumentamos tráfego e autoridade da sua marca</li>
       </ul>
     </section>
 
     <section id="consultoria">
-      <h2>Consultoria de Negócios</h2>
+      <h2 data-lang="consultoria-title">Consultoria de Negócios</h2>
       <ul>
-        <li>Diagnóstico completo do seu negócio</li>
-        <li>Identificação de gargalos e oportunidades</li>
-        <li>Planejamento estratégico personalizado</li>
-        <li>Acompanhamento contínuo com metas claras</li>
+        <li data-lang="consultoria-item-1">Diagnóstico completo do seu negócio</li>
+        <li data-lang="consultoria-item-2">Identificação de gargalos e oportunidades</li>
+        <li data-lang="consultoria-item-3">Planejamento estratégico personalizado</li>
+        <li data-lang="consultoria-item-4">Acompanhamento contínuo com metas claras</li>
       </ul>
     </section>
 
     <section id="branding">
-      <h2>Branding e Identidade Visual</h2>
+      <h2 data-lang="branding-title">Branding e Identidade Visual</h2>
       <ul>
-        <li>Criação de marca com propósito</li>
-        <li>Paleta de cores, tipografia e tom de voz alinhados</li>
-        <li>Design de logotipo profissional</li>
-        <li>Manual de identidade visual</li>
+        <li data-lang="branding-item-1">Criação de marca com propósito</li>
+        <li data-lang="branding-item-2">Paleta de cores, tipografia e tom de voz alinhados</li>
+        <li data-lang="branding-item-3">Design de logotipo profissional</li>
+        <li data-lang="branding-item-4">Manual de identidade visual</li>
       </ul>
     </section>
 
     <section id="social">
-      <h2>Gestão de Redes Sociais</h2>
+      <h2 data-lang="social-title">Gestão de Redes Sociais</h2>
       <ul>
-        <li>Planejamento de conteúdo estratégico</li>
-        <li>Postagens regulares com consistência</li>
-        <li>Engajamento com o público</li>
-        <li>Análise de métricas e resultados</li>
+        <li data-lang="social-item-1">Planejamento de conteúdo estratégico</li>
+        <li data-lang="social-item-2">Postagens regulares com consistência</li>
+        <li data-lang="social-item-3">Engajamento com o público</li>
+        <li data-lang="social-item-4">Análise de métricas e resultados</li>
       </ul>
     </section>
 
     <section id="expansao">
-      <h2>Expansão Internacional</h2>
+      <h2 data-lang="expansao-title">Expansão Internacional</h2>
       <ul>
-        <li>Pesquisa de mercado global</li>
-        <li>Adaptação da comunicação para novos públicos</li>
-        <li>Consultoria para exportação de serviços</li>
-        <li>Presença digital internacional</li>
+        <li data-lang="expansao-item-1">Pesquisa de mercado global</li>
+        <li data-lang="expansao-item-2">Adaptação da comunicação para novos públicos</li>
+        <li data-lang="expansao-item-3">Consultoria para exportação de serviços</li>
+        <li data-lang="expansao-item-4">Presença digital internacional</li>
       </ul>
     </section>
 
-    <p style="text-align:center;">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
+    <p style="text-align:center;" data-lang="cta">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
     <div class="buttons">
       <a href="https://wa.me/5535984069650" target="_blank">WhatsApp</a>
       <a class="instagram" href="https://www.instagram.com/agenciatomorrow?igsh=Z2JhZWhhMTFzbWVo" target="_blank">Instagram</a>
     </div>
 
-    <footer>
+    <footer data-lang="footer">
       © 2022 Tomorrow International. Todos os direitos reservados.
     </footer>
 
@@ -207,6 +220,77 @@
   <script>
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const translations = {
+      "pt": {
+        "marketing-title": "Marketing Estratégico",
+        "marketing-item-1": "Identificamos o público-alvo ideal",
+        "marketing-item-2": "Criamos campanhas orientadas por dados",
+        "marketing-item-3": "Monitoramos resultados e otimizamos performance",
+        "marketing-item-4": "Aumentamos tráfego e autoridade da sua marca",
+        "consultoria-title": "Consultoria de Negócios",
+        "consultoria-item-1": "Diagnóstico completo do seu negócio",
+        "consultoria-item-2": "Identificação de gargalos e oportunidades",
+        "consultoria-item-3": "Planejamento estratégico personalizado",
+        "consultoria-item-4": "Acompanhamento contínuo com metas claras",
+        "branding-title": "Branding e Identidade Visual",
+        "branding-item-1": "Criação de marca com propósito",
+        "branding-item-2": "Paleta de cores, tipografia e tom de voz alinhados",
+        "branding-item-3": "Design de logotipo profissional",
+        "branding-item-4": "Manual de identidade visual",
+        "social-title": "Gestão de Redes Sociais",
+        "social-item-1": "Planejamento de conteúdo estratégico",
+        "social-item-2": "Postagens regulares com consistência",
+        "social-item-3": "Engajamento com o público",
+        "social-item-4": "Análise de métricas e resultados",
+        "expansao-title": "Expansão Internacional",
+        "expansao-item-1": "Pesquisa de mercado global",
+        "expansao-item-2": "Adaptação da comunicação para novos públicos",
+        "expansao-item-3": "Consultoria para exportação de serviços",
+        "expansao-item-4": "Presença digital internacional",
+        "footer": "© 2022 Tomorrow International. Todos os direitos reservados.",
+        "cta": "Se você se interessou por nossos serviços, entre em contato pelos botões abaixo."
+      },
+      "en": {
+        "marketing-title": "Strategic Marketing",
+        "marketing-item-1": "We identify the ideal target audience",
+        "marketing-item-2": "We create data-driven campaigns",
+        "marketing-item-3": "We monitor results and optimize performance",
+        "marketing-item-4": "We increase traffic and brand authority",
+        "consultoria-title": "Business Consulting",
+        "consultoria-item-1": "Complete diagnosis of your business",
+        "consultoria-item-2": "Identification of bottlenecks and opportunities",
+        "consultoria-item-3": "Personalized strategic planning",
+        "consultoria-item-4": "Ongoing support with clear goals",
+        "branding-title": "Branding and Visual Identity",
+        "branding-item-1": "Purpose-driven brand creation",
+        "branding-item-2": "Color palette, typography and tone of voice aligned",
+        "branding-item-3": "Professional logo design",
+        "branding-item-4": "Visual identity manual",
+        "social-title": "Social Media Management",
+        "social-item-1": "Strategic content planning",
+        "social-item-2": "Consistent and regular posting",
+        "social-item-3": "Audience engagement",
+        "social-item-4": "Metrics and performance analysis",
+        "expansao-title": "International Expansion",
+        "expansao-item-1": "Global market research",
+        "expansao-item-2": "Communication adaptation for new audiences",
+        "expansao-item-3": "Consulting for service export",
+        "expansao-item-4": "International digital presence",
+        "footer": "© 2022 Tomorrow International. All rights reserved.",
+        "cta": "If you're interested in our services, contact us using the buttons below."
+      }
+    };
+
+    let currentLang = "pt";
+
+    function toggleLanguage() {
+      currentLang = currentLang === "pt" ? "en" : "pt";
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        el.textContent = translations[currentLang][key] || el.textContent;
+      });
     }
   </script>
 
