@@ -1,193 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomorrow International</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomorrow International</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
 
-    header {
-      background: #fff;
-      padding: 1rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
+    header {
+      background: #fff;
+      padding: 1rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
 
-    .menu-icon {
-      font-size: 2rem;
-      cursor: pointer;
-      position: absolute;
-      left: 1rem;
-      top: 1rem;
-    }
+    .menu-icon {
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
 
-    .logo {
-      margin: 0 auto;
-      max-width: 200px;
-    }
+    .logo {
+      margin: 0 auto;
+      max-width: 200px;
+    }
 
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background: #e67e22;
-      padding: 2rem 1rem;
-      transition: left 0.3s;
-      z-index: 999;
-    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #e67e22;
+      padding: 2rem 1rem;
+      transition: left 0.3s;
+      z-index: 999;
+    }
 
-    .sidebar.open {
-      left: 0;
-    }
+    .sidebar.open {
+      left: 0;
+    }
 
-    .sidebar a {
-      display: block;
-      margin-bottom: 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
+    .sidebar a {
+      display: block;
+      margin-bottom: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
-    .content {
-      padding: 2rem;
-      margin-top: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .content {
+      padding: 2rem;
+      margin-top: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-    section {
-      margin-bottom: 3rem;
-    }
+    section {
+      margin-bottom: 3rem;
+    }
 
-    section img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
+    section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
 
-    h2 {
-      color: #e67e22;
-    }
+    h2 {
+      color: #e67e22;
+    }
 
-    ul {
-      padding-left: 20px;
-    }
+    ul {
+      padding-left: 20px;
+    }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-    .buttons a {
-      text-decoration: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      font-weight: bold;
-      color: white;
-      background-color: #25D366;
-    }
+    .buttons a {
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      color: white;
+      background-color: #25D366;
+    }
 
-    .instagram {
-      background-color: #E1306C;
-    }
+    .instagram {
+      background-color: #E1306C;
+    }
 
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      color: #aaa;
-      margin: 3rem 0 1rem 0;
-    }
-  </style>
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #aaa;
+      margin: 3rem 0 1rem 0;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
 
-  <div class="sidebar" id="sidebar">
-    <a href="#marketing">Marketing Estratégico</a>
-    <a href="#consultoria">Consultoria de Negócios</a>
-    <a href="#branding">Branding e Identidade</a>
-    <a href="#social">Gestão de Redes</a>
-    <a href="#expansao">Expansão Internacional</a>
-  </div>
+  <div class="sidebar" id="sidebar">
+    <a href="#marketing">Marketing Estratégico</a>
+    <a href="#consultoria">Consultoria de Negócios</a>
+    <a href="#branding">Branding e Identidade</a>
+    <a href="#social">Gestão de Redes</a>
+    <a href="#expansao">Expansão Internacional</a>
+  </div>
 
-  <header>
-    <img src="1000074663-removebg-preview.png" alt="Logo" class="logo">
-  </header>
+  <header>
+    <img src="1000074663-removebg-preview.png" alt="Logo" class="logo">
+  </header>
 
-  <div class="content">
+  <div class="content">
 
-    <section id="marketing">
-      <h2>Marketing Estratégico</h2>
-      <img src="https://images.unsplash.com/photo-1581093588401-025efaa7f866" alt="Marketing no computador">
-      <ul>
-        <li>Identificamos o público-alvo ideal</li>
-        <li>Criamos campanhas orientadas por dados</li>
-        <li>Monitoramos resultados e otimizamos performance</li>
-        <li>Aumentamos tráfego e autoridade da sua marca</li>
-      </ul>
-    </section>
+    <section id="marketing">
+      <h2>Marketing Estratégico</h2>
+      <img src="https://images.unsplash.com/photo-1581093588401-025efaa7f866" alt="Marketing no computador">
+      <ul>
+        <li>Identificamos o público-alvo ideal</li>
+        <li>Criamos campanhas orientadas por dados</li>
+        <li>Monitoramos resultados e otimizamos performance</li>
+        <li>Aumentamos tráfego e autoridade da sua marca</li>
+      </ul>
+    </section>
 
-    <section id="consultoria">
-      <h2>Consultoria de Negócios</h2>
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Reunião empresarial">
-      <ul>
-        <li>Diagnóstico completo do seu negócio</li>
-        <li>Identificação de gargalos e oportunidades</li>
-        <li>Planejamento estratégico personalizado</li>
-        <li>Acompanhamento contínuo com metas claras</li>
-      </ul>
-    </section>
+    <section id="consultoria">
+      <h2>Consultoria de Negócios</h2>
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Reunião empresarial">
+      <ul>
+        <li>Diagnóstico completo do seu negócio</li>
+        <li>Identificação de gargalos e oportunidades</li>
+        <li>Planejamento estratégico personalizado</li>
+        <li>Acompanhamento contínuo com metas claras</li>
+      </ul>
+    </section>
 
-    <section id="branding">
-      <h2>Branding e Identidade Visual</h2>
-      <img src="https://images.unsplash.com/photo-1587614382346-acd977736f90" alt="Design e identidade visual">
-      <ul>
-        <li>Criação de marca com propósito</li>
-        <li>Paleta de cores, tipografia e tom de voz alinhados</li>
-        <li>Design de logotipo profissional</li>
-        <li>Manual de identidade visual</li>
-      </ul>
-    </section>
+    <section id="branding">
+      <h2>Branding e Identidade Visual</h2>
+      <img src="https://images.unsplash.com/photo-1587614382346-acd977736f90" alt="Design e identidade visual">
+      <ul>
+        <li>Criação de marca com propósito</li>
+        <li>Paleta de cores, tipografia e tom de voz alinhados</li>
+        <li>Design de logotipo profissional</li>
+        <li>Manual de identidade visual</li>
+      </ul>
+    </section>
 
-    <section id="social">
-      <h2>Gestão de Redes Sociais</h2>
-      <img src="https://images.unsplash.com/photo-1517260911058-0fcfd733702f" alt="Gestão de redes sociais">
-      <ul>
-        <li>Planejamento de conteúdo estratégico</li>
-        <li>Postagens regulares com consistência</li>
-        <li>Engajamento com o público</li>
-        <li>Análise de métricas e resultados</li>
-      </ul>
-    </section>
+    <section id="social">
+      <h2>Gestão de Redes Sociais</h2>
+      <img src="https://images.unsplash.com/photo-1517260911058-0fcfd733702f" alt="Gestão de redes sociais">
+      <ul>
+        <li>Planejamento de conteúdo estratégico</li>
+        <li>Postagens regulares com consistência</li>
+        <li>Engajamento com o público</li>
+        <li>Análise de métricas e resultados</li>
+      </ul>
+    </section>
 
-    <section id="expansao">
-      <h2>Expansão Internacional</h2>
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Expansão global">
-      <ul>
-        <li>Pesquisa de mercado global</li>
-        <li>Adaptação da comunicação para novos públicos</li>
-        <li>Consultoria para exportação de serviços</li>
-        <li>Presença digital internacional</li>
-      </ul>
-    </section>
+    <section id="expansao">
+      <h2>Expansão Internacional</h2>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Expansão global">
+      <ul>
+        <li>Pesquisa de mercado global</li>
+        <li>Adaptação da comunicação para novos públicos</li>
+        <li>Consultoria para exportação de serviços</li>
+        <li>Presença digital internacional</li>
+      </ul>
+    </
+section>
+    <p style="text-align:center;">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
+    <div class="buttons">
+      <a href="https://wa.me/5535984069650" target="_blank">WhatsApp</a>
+      <a class="instagram" href="https://instagram.com/tomorrow.international" target="_blank">Instagram</a>
+    </div>
 
-    <p style="text-align:center;">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
-    <div class="buttons">
-      <a href="https://wa.me/553
-        
+    <footer>
+      © 2022 Tomorrow International. Todos os direitos reservados.
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+  </script>
+
+
+</body>
+</html>
+
+    <p style="text-align:center;">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
+    <div class="buttons">
+      <a href="https://wa.me/553
