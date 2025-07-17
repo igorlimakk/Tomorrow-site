@@ -1,78 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomorrow International</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #e67e22;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #ffffff; /* trocado de laranja para branco */
-      color: #e67e22;
-      text-align: center;
-      padding: 2rem;
-    }
-    header img {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #e67e22;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      padding: 1rem;
-      border-top: 1px solid #e67e22;
-      margin-top: 2rem;
-      color: #e67e22;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #e67e22;
-      color: #e67e22;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    .buttons a:hover {
-      background-color: #fbe9e0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomorrow International</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #fff;
+    }
+
+    header img {
+      max-width: 280px;
+      height: auto;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    h1, h2 {
+      color: #e67e22;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebc5a;
+    }
+
+    .instagram {
+      background-color: #E1306C;
+    }
+
+    .instagram:hover {
+      background-color: #c6285b;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="1000074663-removebg-preview.png" alt="Logo Tomorrow International">
-    <h1>Tomorrow International</h1>
-    <p>Arceburgo - Minas Gerais - Brasil | Desde 2022</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Quem Somos</h2>
-      <p>Somos uma agência de marketing, consultoria e branding com a missão de transformar negócios locais em marcas globais. Com raízes no Brasil e uma visão sem fronteiras, entregamos resultados reais, crescimento escalável e posicionamento poderoso.</p>
-    </section>
+  <header>
+    <img src="https://i.imgur.com/O9mmtos.png" alt="Logo Tomorrow" />
+  </header>
 
-    <section>
-      <h2>O Que Fazemos</h2>
-      <ul>
-        <li>Marketing Estratégico – focado em performance e resultados</li>
-        <li>Consultoria de Negócios – diagnóstico + ação inteligente</li>
-     
+  <main>
+    <h1>Tomorrow International</h1>
+    <p><strong>Arceburgo - Minas Gerais - Brasil | Desde 2022</strong></p>
+
+    <section>
+      <h2>Quem Somos</h2>
+      <p>
+        Somos uma agência de marketing, consultoria e branding com a missão de transformar negócios locais em marcas globais.
+        Com raízes no Brasil e uma visão sem fronteiras, entregamos resultados reais, crescimento escalável e posicionamento poderoso.
+      </p>
+    </section>
+
+    <section>
+      <h2>O Que Fazemos</h2>
+      <ul>
+        <li>Marketing Estratégico – focado em performance e resultados</li>
+        <li>Consultoria de Negócios – diagnóstico + ação inteligente</li>
+      </ul>
+
+      <div class="buttons">
+        <a class="whatsapp" href="https://wa.me/5535984069650" target="_blank">WhatsApp</a>
+        <a class="instagram" href="https://instagram.com/tomorrow.international" target="_blank">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2022 Tomorrow International. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
