@@ -1,247 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomorrow International</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
-    header {
-      background: #fff;
-      padding-top: 5rem;
-      padding-bottom: 1rem;
-      text-align: center;
-      position: relative;
-    }
-    .menu-icon {
-      font-size: 2rem;
-      cursor: pointer;
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1100;
-      background: white;
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
-    }
-    .language-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      background: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      z-index: 1100;
-    }
-    .logo {
-      max-width: 200px;
-      margin: 0 auto;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -300px;
-      width: 250px;
-      max-width: 90%;
-      background: linear-gradient(to bottom, #e74c3c, #e67e22);
-      padding: 2rem 1rem 1rem 1rem;
-      transition: left 0.3s ease-in-out;
-      z-index: 1050;
-    }
-    .sidebar.open {
-      left: 0;
-    }
-    .close-btn {
-      font-size: 1.5rem;
-      color: white;
-      background: none;
-      border: none;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-    }
-    .sidebar a {
-      display: block;
-      margin: 2.5rem 0 1rem 0;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .content {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: 5rem auto 2rem auto;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #e67e22;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .buttons a {
-      text-decoration: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      font-weight: bold;
-      color: white;
-      background-color: #25D366;
-    }
-    .instagram {
-      background-color: #E1306C;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      color: #aaa;
-      margin: 3rem 0 1rem 0;
-    }
-    @media screen and (max-width: 768px) {
-      .sidebar a {
-        display: block;
-        margin: 1.5rem 0;
-        text-align: left;
-      }
-      .sidebar {
-        width: 100%;
-        max-width: 280px;
-        left: -300px;
-      }
-      .sidebar.open {
-        left: 0;
-      }
-      .menu-icon,
-      .language-toggle {
-        z-index: 1200;
-      }
-      header {
-        padding-top: 6rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomorrow International</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .menu-icon {
+      font-size: 2rem;
+      cursor: pointer;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1100;
+      background: white;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+    }
+    .language-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      z-index: 1100;
+    }
+    .logo {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 250px;
+      max-width: 90%;
+      background: linear-gradient(to bottom, #e74c3c, #e67e22);
+      padding: 2rem 1rem 1rem 1rem;
+      transition: left 0.3s ease-in-out;
+      z-index: 1050;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .close-btn {
+      font-size: 1.5rem;
+      color: white;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+    .sidebar a {
+      display: block;
+      margin: 2.5rem 0 1rem 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .content {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 5rem auto 2rem auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #e67e22;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      color: white;
+      background-color: #25D366;
+    }
+    .instagram {
+      background-color: #E1306C;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #aaa;
+      margin: 3rem 0 1rem 0;
+    }
+    @media screen and (max-width: 768px) {
+      .sidebar a {
+        display: block;
+        margin: 1.5rem 0;
+        text-align: left;
+      }
+      .sidebar {
+        width: 100%;
+        max-width: 280px;
+        left: -300px;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .menu-icon,
+      .language-toggle {
+        z-index: 1200;
+      }
+      header {
+        padding-top: 6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
-  <div class="language-toggle" onclick="toggleLanguage()">🌐 Idioma</div>
-  <div class="sidebar" id="sidebar">
-    <button class="close-btn" onclick="toggleSidebar()">✖</button>
-    <a href="#marketing">Marketing Estratégico</a>
-    <a href="#consultoria">Consultoria de Negócios</a>
-    <a href="#branding">Branding e Identidade</a>
-    <a href="#social">Gestão de Redes</a>
-    <a href="#expansao">Expansão Internacional</a>
-  </div>
-  <header>
-    <img src="1000074663-removebg-preview.png" alt="Logo" class="logo">
-  </header>
-  <div class="content">
-    <!-- Todas as seções do site aqui (já estão certas, não mexi nelas porque você pediu só o fix de idioma) -->
-    <!-- ... mantidas do seu código anterior ... -->
-    <p style="text-align:center;" data-lang="cta">Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.</p>
-    <div class="buttons">
-      <a href="https://wa.me/5535984069650" target="_blank">WhatsApp</a>
-      <a class="instagram" href="https://www.instagram.com/agenciatomorrow?igsh=Z2JhZWhhMTFzbWVo" target="_blank">Instagram</a>
-    </div>
-    <footer data-lang="footer">© 2022 Tomorrow International. Todos os direitos reservados.</footer>
-  </div>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="language-toggle" onclick="toggleLanguage()">🌐 Idioma</div>
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">✖</button>
+    <a href="#marketing">Marketing Estratégico</a>
+    <a href="#consultoria">Consultoria de Negócios</a>
+    <a href="#branding">Branding e Identidade</a>
+    <a href="#social">Gestão de Redes</a>
+    <a href="#expansao">Expansão Internacional</a>
+  </div>
+  <header>
+    <img src="1000074663-removebg-preview.png" alt="Logo" class="logo">
+  </header>
+  <div class="content">
+  <section id="marketing">
+    <h2 data-lang="marketing-title">Marketing Estratégico</h2>
+    <ul>
+      <li data-lang="marketing-item-1">Identificamos o público-alvo ideal</li>
+      <li data-lang="marketing-item-2">Criamos campanhas orientadas por dados</li>
+      <li data-lang="marketing-item-3">Monitoramos resultados e otimizamos performance</li>
+      <li data-lang="marketing-item-4">Aumentamos tráfego e autoridade da sua marca</li>
+    </ul>
+  </section>
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-    }
+  <section id="consultoria">
+    <h2 data-lang="consultoria-title">Consultoria de Negócios</h2>
+    <ul>
+      <li data-lang="consultoria-item-1">Diagnóstico completo do seu negócio</li>
+      <li data-lang="consultoria-item-2">Identificação de gargalos e oportunidades</li>
+      <li data-lang="consultoria-item-3">Planejamento estratégico personalizado</li>
+      <li data-lang="consultoria-item-4">Acompanhamento contínuo com metas claras</li>
+    </ul>
+  </section>
 
-    const translations = {
-      pt: {
-        "marketing-title": "Marketing Estratégico",
-        "marketing-item-1": "Identificamos o público-alvo ideal",
-        "marketing-item-2": "Criamos campanhas orientadas por dados",
-        "marketing-item-3": "Monitoramos resultados e otimizamos performance",
-        "marketing-item-4": "Aumentamos tráfego e autoridade da sua marca",
-        "consultoria-title": "Consultoria de Negócios",
-        "consultoria-item-1": "Diagnóstico completo do seu negócio",
-        "consultoria-item-2": "Identificação de gargalos e oportunidades",
-        "consultoria-item-3": "Planejamento estratégico personalizado",
-        "consultoria-item-4": "Acompanhamento contínuo com metas claras",
-        "branding-title": "Branding e Identidade Visual",
-        "branding-item-1": "Criação de marca com propósito",
-        "branding-item-2": "Paleta de cores, tipografia e tom de voz alinhados",
-        "branding-item-3": "Design de logotipo profissional",
-        "branding-item-4": "Manual de identidade visual",
-        "social-title": "Gestão de Redes Sociais",
-        "social-item-1": "Planejamento de conteúdo estratégico",
-        "social-item-2": "Postagens regulares com consistência",
-        "social-item-3": "Engajamento com o público",
-        "social-item-4": "Análise de métricas e resultados",
-        "expansao-title": "Expansão Internacional",
-        "expansao-item-1": "Pesquisa de mercado global",
-        "expansao-item-2": "Adaptação da comunicação para novos públicos",
-        "expansao-item-3": "Consultoria para exportação de serviços",
-        "expansao-item-4": "Presença digital internacional",
-        "footer": "© 2022 Tomorrow International. Todos os direitos reservados.",
-        "cta": "Se você se interessou por nossos serviços, entre em contato pelos botões abaixo."
-      },
-      en: {
-        "marketing-title": "Strategic Marketing",
-        "marketing-item-1": "We identify the ideal target audience",
-        "marketing-item-2": "We create data-driven campaigns",
-        "marketing-item-3": "We monitor results and optimize performance",
-        "marketing-item-4": "We increase traffic and brand authority",
-        "consultoria-title": "Business Consulting",
-        "consultoria-item-1": "Complete diagnosis of your business",
-        "consultoria-item-2": "Identification of bottlenecks and opportunities",
-        "consultoria-item-3": "Personalized strategic planning",
-        "consultoria-item-4": "Ongoing support with clear goals",
-        "branding-title": "Branding and Visual Identity",
-        "branding-item-1": "Purpose-driven brand creation",
-        "branding-item-2": "Color palette, typography and tone of voice aligned",
-        "branding-item-3": "Professional logo design",
-        "branding-item-4": "Visual identity manual",
-        "social-title": "Social Media Management",
-        "social-item-1": "Strategic content planning",
-        "social-item-2": "Consistent and regular posting",
-        "social-item-3": "Audience engagement",
-        "social-item-4": "Metrics and performance analysis",
-        "expansao-title": "International Expansion",
-        "expansao-item-1": "Global market research",
-        "expansao-item-2": "Communication adaptation for new audiences",
-        "expansao-item-3": "Consulting for service export",
-        "expansao-item-4": "International digital presence",
-        "footer": "© 2022 Tomorrow International. All rights reserved.",
-        "cta": "If you're interested in our services, contact us using the buttons below."
-      }
-    };
+  <section id="branding">
+    <h2 data-lang="branding-title">Branding e Identidade Visual</h2>
+    <ul>
+      <li data-lang="branding-item-1">Criação de marca com propósito</li>
+      <li data-lang="branding-item-2">Paleta de cores, tipografia e tom de voz alinhados</li>
+      <li data-lang="branding-item-3">Design de logotipo profissional</li>
+      <li data-lang="branding-item-4">Manual de identidade visual</li>
+    </ul>
+  </section>
 
-    let currentLang = "pt";
+  <section id="social">
+    <h2 data-lang="social-title">Gestão de Redes Sociais</h2>
+    <ul>
+      <li data-lang="social-item-1">Planejamento de conteúdo estratégico</li>
+      <li data-lang="social-item-2">Postagens regulares com consistência</li>
+      <li data-lang="social-item-3">Engajamento com o público</li>
+      <li data-lang="social-item-4">Análise de métricas e resultados</li>
+    </ul>
+  </section>
 
-    function toggleLanguage() {
-      currentLang = currentLang === "pt" ? "en" : "pt";
-      document.documentElement.lang = currentLang;
-      document.querySelectorAll("[data-lang]").forEach(el => {
-        const key = el.getAttribute("data-lang");
-        el.textContent = translations[currentLang][key] || el.textContent;
-      });
-    }
-  </script>
+  <section id="expansao">
+    <h2 data-lang="expansao-title">Expansão Internacional</h2>
+    <ul>
+      <li data-lang="expansao-item-1">Pesquisa de mercado global</li>
+      <li data-lang="expansao-item-2">Adaptação da comunicação para novos públicos</li>
+      <li data-lang="expansao-item-3">Consultoria para exportação de serviços</li>
+      <li data-lang="expansao-item-4">Presença digital internacional</li>
+    </ul>
+  </section>
+
+  <p style="text-align:center;" data-lang="cta">
+    Se você se interessou por nossos serviços, entre em contato pelos botões abaixo.
+  </p>
+
+  <div class="buttons">
+    <a href="https://wa.me/5535984069650" target="_blank">WhatsApp</a>
+    <a class="instagram" href="https://www.instagram.com/agenciatomorrow?igsh=Z2JhZWhhMTFzbWVo" target="_blank">Instagram</a>
+  </div>
+
+  <footer data-lang="footer">
+    © 2022 Tomorrow In
+ternational. Todos os direitos reservados.
+  </footer>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const translations = {
+      pt: {
+        "marketing-title": "Marketing Estratégico",
+        "marketing-item-1": "Identificamos o público-alvo ideal",
+        "marketing-item-2": "Criamos campanhas orientadas por dados",
+        "marketing-item-3": "Monitoramos resultados e otimizamos performance",
+        "marketing-item-4": "Aumentamos tráfego e autoridade da sua marca",
+        "consultoria-title": "Consultoria de Negócios",
+        "consultoria-item-1": "Diagnóstico completo do seu negócio",
+        "consultoria-item-2": "Identificação de gargalos e oportunidades",
+        "consultoria-item-3": "Planejamento estratégico personalizado",
+        "consultoria-item-4": "Acompanhamento contínuo com metas claras",
+        "branding-title": "Branding e Identidade Visual",
+        "branding-item-1": "Criação de marca com propósito",
+        "branding-item-2": "Paleta de cores, tipografia e tom de voz alinhados",
+        "branding-item-3": "Design de logotipo profissional",
+        "branding-item-4": "Manual de identidade visual",
+        "social-title": "Gestão de Redes Sociais",
+        "social-item-1": "Planejamento de conteúdo estratégico",
+        "social-item-2": "Postagens regulares com consistência",
+        "social-item-3": "Engajamento com o público",
+        "social-item-4": "Análise de métricas e resultados",
+        "expansao-title": "Expansão Internacional",
+        "expansao-item-1": "Pesquisa de mercado global",
+        "expansao-item-2": "Adaptação da comunicação para novos públicos",
+        "expansao-item-3": "Consultoria para exportação de serviços",
+        "expansao-item-4": "Presença digital internacional",
+        "footer": "© 2022 Tomorrow International. Todos os direitos reservados.",
+        "cta": "Se você se interessou por nossos serviços, entre em contato pelos botões abaixo."
+      },
+      en: {
+        "marketing-title": "Strategic Marketing",
+        "marketing-item-1": "We identify the ideal target audience",
+        "marketing-item-2": "We create data-driven campaigns",
+        "marketing-item-3": "We monitor results and optimize performance",
+        "marketing-item-4": "We increase traffic and brand authority",
+        "consultoria-title": "Business Consulting",
+        "consultoria-item-1": "Complete diagnosis of your business",
+        "consultoria-item-2": "Identification of bottlenecks and opportunities",
+        "consultoria-item-3": "Personalized strategic planning",
+        "consultoria-item-4": "Ongoing support with clear goals",
+        "branding-title": "Branding and Visual Identity",
+        "branding-item-1": "Purpose-driven brand creation",
+        "branding-item-2": "Color palette, typography and tone of voice aligned",
+        "branding-item-3": "Professional logo design",
+        "branding-item-4": "Visual identity manual",
+        "social-title": "Social Media Management",
+        "social-item-1": "Strategic content planning",
+        "social-item-2": "Consistent and regular posting",
+        "social-item-3": "Audience engagement",
+        "social-item-4": "Metrics and performance analysis",
+        "expansao-title": "International Expansion",
+        "expansao-item-1": "Global market research",
+        "expansao-item-2": "Communication adaptation for new audiences",
+        "expansao-item-3": "Consulting for service export",
+        "expansao-item-4": "International digital presence",
+        "footer": "© 2022 Tomorrow International. All rights reserved.",
+        "cta": "If you're interested in our services, contact us using the buttons below."
+      }
+    };
+
+    let currentLang = "pt";
+
+    function toggleLanguage() {
+      currentLang = currentLang === "pt" ? "en" : "pt";
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        el.textContent = translations[currentLang][key] || el.textContent;
+      });
+    }
+  </script>
 </body>
 </html>
