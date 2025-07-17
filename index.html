@@ -29,7 +29,10 @@
       position: fixed;
       left: 1rem;
       top: 1rem;
-      z-index: 1001;
+      z-index: 2001;
+      background: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
     }
 
     .logo {
@@ -42,10 +45,13 @@
       left: -250px;
       width: 250px;
       height: 100%;
-      background: #e67e22;
+      background: linear-gradient(to bottom, #e53935, #f57c00);
       padding: 2rem 1rem;
-      transition: left 0.3s;
-      z-index: 1000;
+      transition: left 0.3s ease;
+      z-index: 2000;
+      overflow-y: auto;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     .sidebar.open {
@@ -54,11 +60,15 @@
 
     .sidebar a {
       display: block;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
     }
 
     .content {
@@ -193,6 +203,12 @@
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("open");
     }
+
+    document.querySelectorAll('.sidebar a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("sidebar").classList.remove("open");
+      });
+    });
   </script>
 
 </body>
