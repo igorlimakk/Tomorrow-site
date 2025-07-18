@@ -53,7 +53,7 @@
 
     header {
       background: #fff;
-      padding: 5rem 1rem 1rem 1rem; /* padding-top maior pra não pegar nas bandeiras */
+      padding: 5rem 1rem 1rem 1rem;
       text-align: center;
       position: relative;
     }
@@ -149,7 +149,6 @@
 
   <div class="menu-icon" onclick="toggleSidebar()">☰</div>
 
-  <!-- Bandeiras fixas no canto -->
   <div class="language-flags">
     <div class="language-flag" onclick="setLanguage('pt')">🇧🇷</div>
     <div class="language-flag" onclick="setLanguage('en')">🇺🇸</div>
@@ -238,9 +237,139 @@
       document.getElementById("sidebar").classList.toggle("open");
     }
 
+    const translations = {
+      pt: {
+        marketing: "Marketing Estratégico",
+        marketingList: [
+          "Identificamos o público-alvo ideal",
+          "Criamos campanhas orientadas por dados",
+          "Monitoramos resultados e otimizamos performance",
+          "Aumentamos tráfego e autoridade da sua marca"
+        ],
+        consultoria: "Consultoria de Negócios",
+        consultoriaList: [
+          "Diagnóstico completo do seu negócio",
+          "Identificação de gargalos e oportunidades",
+          "Planejamento estratégico personalizado",
+          "Acompanhamento contínuo com metas claras"
+        ],
+        branding: "Branding e Identidade Visual",
+        brandingList: [
+          "Criação de marca com propósito",
+          "Paleta de cores, tipografia e tom de voz alinhados",
+          "Design de logotipo profissional",
+          "Manual de identidade visual"
+        ],
+        social: "Gestão de Redes Sociais",
+        socialList: [
+          "Planejamento de conteúdo estratégico",
+          "Postagens regulares com consistência",
+          "Engajamento com o público",
+          "Análise de métricas e resultados"
+        ],
+        expansao: "Expansão Internacional",
+        expansaoList: [
+          "Pesquisa de mercado global",
+          "Adaptação da comunicação para novos públicos",
+          "Consultoria para exportação de serviços",
+          "Presença digital internacional"
+        ],
+        contato: "Se você se interessou por nossos serviços, entre em contato pelos botões abaixo."
+      },
+      en: {
+        marketing: "Strategic Marketing",
+        marketingList: [
+          "We identify the ideal target audience",
+          "We create data-driven campaigns",
+          "We monitor results and optimize performance",
+          "We increase traffic and brand authority"
+        ],
+        consultoria: "Business Consulting",
+        consultoriaList: [
+          "Complete diagnosis of your business",
+          "Identification of bottlenecks and opportunities",
+          "Customized strategic planning",
+          "Ongoing support with clear goals"
+        ],
+        branding: "Branding and Visual Identity",
+        brandingList: [
+          "Purpose-driven brand creation",
+          "Color palette, typography and tone of voice aligned",
+          "Professional logo design",
+          "Visual identity manual"
+        ],
+        social: "Social Media Management",
+        socialList: [
+          "Strategic content planning",
+          "Consistent regular posts",
+          "Audience engagement",
+          "Metrics and results analysis"
+        ],
+        expansao: "International Expansion",
+        expansaoList: [
+          "Global market research",
+          "Communication adapted to new audiences",
+          "Consulting for service exports",
+          "International digital presence"
+        ],
+        contato: "If you're interested in our services, get in touch using the buttons below."
+      },
+      es: {
+        marketing: "Marketing Estratégico",
+        marketingList: [
+          "Identificamos el público objetivo ideal",
+          "Creamos campañas basadas en datos",
+          "Monitoreamos resultados y optimizamos el rendimiento",
+          "Aumentamos el tráfico y la autoridad de tu marca"
+        ],
+        consultoria: "Consultoría de Negocios",
+        consultoriaList: [
+          "Diagnóstico completo de tu negocio",
+          "Identificación de cuellos de botella y oportunidades",
+          "Planificación estratégica personalizada",
+          "Seguimiento continuo con metas claras"
+        ],
+        branding: "Branding e Identidad Visual",
+        brandingList: [
+          "Creación de marca con propósito",
+          "Paleta de colores, tipografía y tono de voz alineados",
+          "Diseño profesional de logotipo",
+          "Manual de identidad visual"
+        ],
+        social: "Gestión de Redes Sociales",
+        socialList: [
+          "Planificación estratégica de contenido",
+          "Publicaciones regulares con consistencia",
+          "Interacción con el público",
+          "Análisis de métricas y resultados"
+        ],
+        expansao: "Expansión Internacional",
+        expansaoList: [
+          "Investigación de mercado global",
+          "Adaptación de comunicación para nuevos públicos",
+          "Consultoría para exportación de servicios",
+          "Presencia digital internacional"
+        ],
+        contato: "Si te interesan nuestros servicios, contáctanos a través de los botones abajo."
+      }
+    };
+
     function setLanguage(lang) {
-      alert("Idioma trocado para: " + lang.toUpperCase() + " (simulação)");
-      // window.location.href = lang + '.html';
+      const t = translations[lang];
+
+      document.querySelector("#marketing h2").innerText = t.marketing;
+      document.querySelector("#consultoria h2").innerText = t.consultoria;
+      document.querySelector("#branding h2").innerText = t.branding;
+      document.querySelector("#social h2").innerText = t.social;
+      document.querySelector("#expansao h2").innerText = t.expansao;
+      document.querySelector("p").innerText = t.contato;
+
+      const sections = ["marketing", "consultoria", "branding", "social", "expansao"];
+      sections.forEach(id => {
+        const listItems = document.querySelectorAll(`#${id} ul li`);
+        const newList = t[id + "List"];
+        listItems.forEach((li, i) => li.innerText = newList[i]);
+      });
     }
   </script>
 
