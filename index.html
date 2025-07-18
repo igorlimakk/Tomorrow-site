@@ -17,13 +17,6 @@
       color: #333;
     }
 
-    header {
-      background: #fff;
-      padding: 1rem;
-      text-align: center;
-      position: relative;
-    }
-
     .menu-icon {
       font-size: 2rem;
       cursor: pointer;
@@ -56,6 +49,13 @@
 
     .language-flag:hover {
       background: #f0f0f0;
+    }
+
+    header {
+      background: #fff;
+      padding: 5rem 1rem 1rem 1rem; /* padding-top maior pra não pegar nas bandeiras */
+      text-align: center;
+      position: relative;
     }
 
     .logo {
@@ -102,7 +102,7 @@
     .content {
       padding: 2rem 1rem;
       max-width: 800px;
-      margin: 5rem auto 2rem auto;
+      margin: 0 auto 2rem auto;
     }
 
     section {
@@ -149,7 +149,7 @@
 
   <div class="menu-icon" onclick="toggleSidebar()">☰</div>
 
-  <!-- Bandeirinhas de idioma -->
+  <!-- Bandeiras fixas no canto -->
   <div class="language-flags">
     <div class="language-flag" onclick="setLanguage('pt')">🇧🇷</div>
     <div class="language-flag" onclick="setLanguage('en')">🇺🇸</div>
@@ -240,7 +240,6 @@
 
     function setLanguage(lang) {
       alert("Idioma trocado para: " + lang.toUpperCase() + " (simulação)");
-      // Aqui você pode redirecionar pra outra página, tipo:
       // window.location.href = lang + '.html';
     }
   </script>
